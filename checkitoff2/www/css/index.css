@@ -182,30 +182,69 @@ h1 {
 }
 */
 
+.ui-header {
+    background-image : url(../img/cloud.png);
+}
+
+#mainmenu {
+    background-image : url(../img/Cat_Toss_Background.jpg);
+    background-size: "100%";
+    width: 320px;
+    height: 480px;
+    position:absolute;
+}
+
 #eatit-link, #map-link, #talkit-link, #tossit-link, #readit-link {
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    border-radius: 50px;
-    font-size: 15px;
+    width:7rem;
+    height: 7rem;
+    -moz-border-radius: 3.75rem;
+    -webkit-border-radius: 3.75rem;
+    border-radius: 4rem;
+    font-size: 1rem;
+    text-align:center; 
     color:white;
-    padding-top:45px;
-    padding-bottom:45px;
-    padding-left:25px;
-    padding-right:25px;
-    line-height: 60px;
     border-style: dashed;
-    border-width: 2px;
+    border-width: .1rem;
 }
 
 #map-link {
     background: #fbb03b;
 }
 
+#walkitBackground{
+    width: 12.5rem;
+    height: 12.5rem;
+    -moz-border-radius: 6.25rem;
+    -webkit-border-radius: 6.25rem;
+    border-radius: 6.25rem;
+    font-size: 12rem;
+    color:white;
+    background: #007100;
+    position: absolute;
+    left:-0.75rem;
+    top: 5rem; 
+}
+
+#eatitBackground{
+    width: 8rem;
+    height: 8rem;
+    -moz-border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    border-radius: 5rem;
+    font-size: 10rem;
+    color:white;
+    background: #007100;
+    position: absolute;
+    left:11rem;
+    top: 1rem;
+}
+
 #eatit-link {
+    line-height: 8em;
     background: #0071bc;
-    position: relative;
-    left:150px;
-    top: 150px;
+    position: absolute;
+    left:.5rem;
+    top: .5rem;
 }
 
 #talkit-link {
