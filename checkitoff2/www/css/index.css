@@ -81,16 +81,20 @@ body {
 #maps.ui-page-theme-a .ui-bar-inherit { height: 8%; }
 
 /** BACK  BUTTON **/
-.ui-page-theme-a {
-    background: none;
+.ui-page .ui-header .ui-toolbar-back-btn {
     border: none;
     overflow: hidden;
     text-indent: -9999px;
-
+    background: transparent url(../img/back_button.png) left top no-repeat;
+    border-radius: none;
+    -webkit-border-radius: none;
+    background-size: contain;
+    box-shadow: none;
+    padding: 20px;
 }
 
-.ui-mini.ui-btn-icon-left:after {
-    background: transparent url(../img/back_button.png) left top no-repeat;
+.ui-page .ui-btn-icon-left:after {
+    background: none;
 }
 
 .location-list-item {
