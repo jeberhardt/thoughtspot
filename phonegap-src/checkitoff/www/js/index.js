@@ -44,10 +44,12 @@ var app = {
         var opts = {
             center: latlon,
             zoom: 16,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            streetViewControl: false
         };
 
         var map = new google.maps.Map(document.getElementById("geolocation"), opts);
+        app.initMaps();
 
     },
     onError: function(error) {
@@ -68,7 +70,19 @@ var app = {
 
     //*********************************** MARC ******************************//
 
-    testFunction: function() {
+    initMaps: function() {
         console.log("GET OUT OF MY HOUSE");
+        app.loadThoughtSpotData();
+    },
+
+    loadThoughtSpotData: function() {
+         $.ajax({
+            url: "data/tsdata.csv",
+            dataType: 'text',
+            cache: false
+         }).done(function(csvAsString){
+                csvAsArray = csvAsString.csvToArray();
+                alert("COMPLETE: " + csvAsArray[0].length);
+         });
     }
 };
