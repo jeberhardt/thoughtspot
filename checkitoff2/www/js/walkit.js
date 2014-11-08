@@ -7,7 +7,7 @@ var walk = {
 	initialize: function() {
 		navigator.geolocation.getCurrentPosition(walk.onMapSuccess, walk.onMapError);
 	},
-	
+
     onMapSuccess: function(pos) {
         var lat = pos.coords.latitude;
         var lon = pos.coords.longitude;
@@ -40,7 +40,8 @@ var walk = {
     },
     onMapDataLoaded: function() {
         var localStuff = dataModel.getWithinDistance(dataModel.data, 1, walk.latlon.lat(), walk.latlon.lng());
-        walk.showListWithMap(localStuff);
+        var localStuffCategorized = dataModel.getInCategory(localStuff, "Recreation and Culture");
+        walk.showListWithMap(localStuffCategorized);
     },
     showListWithMap:function(locations) {
 
