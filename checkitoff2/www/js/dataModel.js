@@ -19,7 +19,7 @@ var dataModel = {
             	}
 
 	        }
-            app.onDataLoaded();
+            walk.onMapDataLoaded();
 
        	});
     },
@@ -29,7 +29,7 @@ var dataModel = {
 		return [];
 	},
 
-	
+
 
 	getWithinDistance: function(ARG_dataset, ARG_distance, ARG_startLat, ARG_startLon) {
 		var closePlaces = [];

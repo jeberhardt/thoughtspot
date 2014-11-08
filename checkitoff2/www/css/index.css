@@ -72,15 +72,19 @@ body {
     font-size: 1.3em;
     color: white;
     vertical-align: middle;
-    padding: 5px;
+    padding: 10px 5px 0;
     text-shadow: none;
-    display: table-cell;
+    display: block;
     width: 100%;
     border-bottom: 1px solid white;
 
 }
 
 .ui-content { padding: 0; }
+
+.ui-mobile .ui-page-active { height: 100%; }
+
+#mainmenu { height: 100%; }
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
