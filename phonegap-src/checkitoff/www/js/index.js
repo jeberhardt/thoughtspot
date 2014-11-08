@@ -17,6 +17,7 @@
  * under the License.
  */
 var app = {
+    data: [],
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -81,8 +82,25 @@ var app = {
             dataType: 'text',
             cache: false
          }).done(function(csvAsString){
-                csvAsArray = csvAsString.csvToArray();
-                alert("COMPLETE: " + csvAsArray[0].length);
+                csvArray = csvAsString.csvToArray({ rSep:'\n', quot:"\"" });
+                for (var i in csvArray) {
+                    if (i > 0) {
+                        var obj = {};
+                        for (var j in csvArray[0]) {
+                            
+                            obj[csvArray[0][j]] = csvArray[i][j];
+                        }
+                        app.data.push(obj);
+                    }
+                    
+                }
+                app.onDataLoaded();
          });
+    },
+
+    onDataLoaded: function() {
+        
     }
+
+    
 };

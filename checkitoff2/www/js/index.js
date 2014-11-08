@@ -72,17 +72,10 @@ var app = {
 
     initMaps: function() {
         console.log("GET OUT OF MY HOUSE");
-        app.loadThoughtSpotData();
+        data.loadThoughtSpotData();
     },
 
-    loadThoughtSpotData: function() {
-         $.ajax({
-            url: "data/tsdata.csv",
-            dataType: 'text',
-            cache: false
-         }).done(function(csvAsString){
-                csvAsArray = csvAsString.csvToArray({ rSep:'||' , fSep:'#' , quot:"'" , trim:true });
-                alert("COMPLETE: " + csvAsArray[0].length);
-         });
+    onDataLoaded: function() {
+
     }
 };
