@@ -18,6 +18,7 @@
  */
 var app = {
     map: null,
+    latlon: null,
 
     // Application Constructor
     initialize: function() {
@@ -40,7 +41,6 @@ var app = {
         $("#map-link").on("tap", function(e){
             e.preventDefault();
             $.mobile.changePage("#maps"), { transition: "none", reverse: false, changeHash: true};
-            console.log("SHOW THE MAP BITCHES");
             navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
         });
         
@@ -48,10 +48,10 @@ var app = {
     onSuccess: function(pos) {
         var lat = pos.coords.latitude;
         var lon = pos.coords.longitude;
-        var latlon = new google.maps.LatLng(lat, lon);
+        app.latlon = new google.maps.LatLng(lat, lon);
 
         var opts = {
-            center: latlon,
+            center: app.latlon,
             zoom: 16,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             streetViewControl: false
@@ -59,7 +59,7 @@ var app = {
 
         app.map = new google.maps.Map(document.getElementById("geolocation"), opts);
 
-        app.initMaps(latlon);
+        app.initMaps(app.latlon);
 
     },
     onError: function(error) {
@@ -83,7 +83,6 @@ var app = {
     initMaps: function(pos) {
         // console.log("GET OUT OF MY HOUSE");
         dataModel.loadThoughtSpotData();
-        console.log("init maps");
         var marker = new google.maps.Marker({
             position: pos,
             map: app.map,
@@ -92,6 +91,7 @@ var app = {
     },
 
     onDataLoaded: function() {
-        console.log("DATA LOADED");
+        var localStuff = dataModel.getWithinDistance(dataModel.data, 10, app.latlon.lat(), app.latlon.lng());
+        console.log(localStuff);
     }
 };
