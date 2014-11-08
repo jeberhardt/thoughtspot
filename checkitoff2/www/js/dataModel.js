@@ -24,6 +24,13 @@ var dataModel = {
        	});
     },
 
+	getInCategory: function(ARG_dataset, ARG_cat) {
+		var inCategory = [];
+		for (var i in ARG_dataset) {
+			// if the category is in the list, add it to the return array
+			if (ARG_dataset[i].CATEGORY.indexOf(ARG_cat) != -1)  inCategory.push(ARG_dataset[i])
+		}
+		return inCategory;
 	getInCategory: function(ARG_cat) {
 
 		return [];

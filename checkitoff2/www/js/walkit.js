@@ -75,7 +75,7 @@ var walk = {
 		});
     },
     onMapDataLoaded: function() {
-        var localStuff = dataModel.getWithinDistance(dataModel.data, 1, walk.latlon.lat(), walk.latlon.lng());
+        var localStuff = dataModel.getWithinDistance(dataModel.data, 0.6, walk.latlon.lat(), walk.latlon.lng());
         walk.showListWithMap(localStuff);
     },
     showListWithMap:function(locations) {
@@ -102,10 +102,6 @@ var walk = {
             
 
         }
-
-        $(".location-list-item").dotdotdot({
-				//	configuration goes here
-			});
 
         var loc1 = locations[Math.floor(Math.random() * (locations.length -1))];
         var loc2 = locations[Math.floor(Math.random() * (locations.length -1))];
