@@ -36,31 +36,9 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-        $("#map-link").on("tap", function(e){
+        $("#contact-link").on("tap", function(e){
             e.preventDefault();
-            $.mobile.changePage("#maps"), { transition: "slidefade", reverse: false, changeHash: true};
-            walk.initialize(); 
-        });
-
-        $("#eatit-link").on("tap", function(e){
-            e.preventDefault();
-            $.mobile.changePage("#eatit"), { transition: "slidefade", reverse: false, changeHash: true};
-        });
-
-        $("#readit-link").on("tap", function(e){
-            e.preventDefault();
-            $.mobile.changePage("#readit"), { transition: "slidefade", reverse: false, changeHash: true};
-        });
-
-        $("#tossit-link").on("tap", function(e){
-            e.preventDefault();
-            $.mobile.changePage("#tossit"), { transition: "slidefade", reverse: false, changeHash: true};
-        });        
-
-        $("#talkit-link").on("tap", function(e){
-            e.preventDefault();
-            $.mobile.changePage("#talkit"), { transition: "slidefade", reverse: false, changeHash: true};
-        });        
+        });       
         
     },
     // Update DOM on a Received Event
@@ -74,6 +52,4 @@ var app = {
 
         console.log('Received Event: ' + id);
     },
-
-
 };
