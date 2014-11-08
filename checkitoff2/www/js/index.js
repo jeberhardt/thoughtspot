@@ -45,15 +45,20 @@ var app = {
             navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
         });
 
-        $("#eait-link").on("tap", function(e){
+        $("#eatit-link").on("tap", function(e){
             e.preventDefault();
-            $.mobile.changePage("#eait"), { transition: "slidefade", reverse: false, changeHash: true};
+            $.mobile.changePage("#eatit"), { transition: "slidefade", reverse: false, changeHash: true};
         });
 
         $("#readit-link").on("tap", function(e){
             e.preventDefault();
             $.mobile.changePage("#readit"), { transition: "slidefade", reverse: false, changeHash: true};
         });
+
+        $("#tossit-link").on("tap", function(e){
+            e.preventDefault();
+            $.mobile.changePage("#tossit"), { transition: "slidefade", reverse: false, changeHash: true};
+        });        
 
         $("#talkit-link").on("tap", function(e){
             e.preventDefault();
