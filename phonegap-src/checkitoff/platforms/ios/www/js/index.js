@@ -34,8 +34,6 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-<<<<<<< HEAD
-=======
         navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
     },
     onSuccess: function(pos) {
@@ -54,16 +52,15 @@ var app = {
     },
     onError: function(error) {
         alert("error bitches: " + error.code + "\nmessage: " + error.message + "\n");
->>>>>>> FETCH_HEAD
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+        // var parentElement = document.getElementById(id);
+        // var listeningElement = parentElement.querySelector('.listening');
+        // var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+        // listeningElement.setAttribute('style', 'display:none;');
+        // receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
     }
