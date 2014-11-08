@@ -65,7 +65,6 @@ body {
 #geolocation { height: 50%; width: 100%; }
 
 #mapListing { width: 100%; height: 50%; overflow-y: scroll;}
-
 .location-list-item {
 
     height: 50px;
@@ -73,11 +72,10 @@ body {
     font-size: 1.3em;
     color: white;
     vertical-align: middle;
-    padding: 10px 5px 0;
+    padding: 5px;
     text-shadow: none;
-    display: block;
+    display: table-cell;
     width: 100%;
-    line-height: 50px;
     border-bottom: 1px solid white;
 
 }
@@ -169,6 +167,9 @@ h1 {
 
 #eatit-link {
     background: #0071bc;
+    position: relative;
+    left:150px;
+    top: 150px;
 }
 
 #talkit-link {
