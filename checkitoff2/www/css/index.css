@@ -159,6 +159,8 @@ h1 {
     padding-left:25px;
     padding-right:25px;
     line-height: 60px;
+    border-style: dashed;
+    border-width: 2px;
 }
 
 #map-link {
