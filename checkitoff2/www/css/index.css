@@ -62,22 +62,40 @@ body {
                                    /* offset horizontal: half of text area width */
 }
 
-#geolocation { height: 50%; width: 100%; }
+#geolocation { height: 45%; width: 100%; }
 
-#mapListing { width: 100%; height: 50%; overflow-y: scroll;}
+#mapListing { width: 100%; height: 42%; overflow-y: scroll;}
+
+#message-area { width: 90%;
+display: block;
+background: cadetblue;
+height: 6%;
+color: white;
+text-shadow: none;
+font-size: 1.3em;
+padding: 5%; 
+}
+
+#maps .ui-content { height: 92%; }
+#maps.ui-page-theme-a .ui-bar-inherit { height: 8%; }
+
+
 .location-list-item {
 
-    height: 50px;
+    /*height: 50px;*/
     background-color: cadetblue;
     font-size: 1.3em;
     color: white;
     vertical-align: middle;
-    padding: 10px 5px 0;
+    /*padding: 10px 5px 0;*/
     text-shadow: none;
     display: block;
     width: 100%;
     border-bottom: 1px solid white;
-
+}
+.location-list-item p {
+    padding: 10px;
+    margin: 0;
 }
 
 .ui-content { padding: 0; }
