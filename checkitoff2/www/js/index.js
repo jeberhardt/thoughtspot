@@ -19,8 +19,10 @@
 var app = {
     map: null,
     latlon: null,
-
+    directionsDisplay: null,
+    directionsService: null,
     // Application Constructor
+    
     initialize: function() {
         this.bindEvents();
     },
@@ -102,8 +104,9 @@ var app = {
     //*********************************** MARC ******************************//
 
     initMaps: function(pos) {
-        // console.log("GET OUT OF MY HOUSE");
+
         dataModel.loadThoughtSpotData();
+        
         var marker = new google.maps.Marker({
             position: pos,
             map: app.map,
@@ -117,7 +120,9 @@ var app = {
     },
 
     showListWithMap:function(locations) {
+
         $("#map-listing").html('');
+        
         for (var i in locations) {
             var lat = locations[i].LATITUDE;
             var lon = locations[i].LONGITUDE;
@@ -128,8 +133,41 @@ var app = {
                 map: app.map
                 // title:"you be here!"
             });
+
             var div = "<div class='location-list-item'>" + locations[i]["INCIDENT TITLE"] + "</div>";
             $("#mapListing").append($(div));
+
         }
+
+        app.generateWalkRoute(app.latlon, new google.maps.LatLng( locations[0].LATITUDE, locations[0].LONGITUDE));
+    },
+
+    generateWalkRoute: function(start, end) {
+        app.directionsService = new google.maps.DirectionsService();
+        app.directionsDisplay = new google.maps.DirectionsRenderer();
+        // var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+        // var mapOptions = {
+            // zoom:7,
+            // center: chicago
+        // };
+        // map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        app.directionsDisplay.setMap(app.map);
+        calcRoute(start, end);
+    },
+
+    calcRoute: function(start, end) {
+        // var start = document.getElementById('start').value;
+        // var end = document.getElementById('end').value;
+        var request = {
+            origin: start,
+            destination: end,
+            travelMode: google.maps.TravelMode.WALKING
+        };
+
+        app.directionsService.route(request, function(response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                app.directionsDisplay.setDirections(response);
+            }
+        });
     }
 };
