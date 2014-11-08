@@ -26,6 +26,7 @@
 /Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/cordova.js \
 /Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/cordova_plugins.js \
 /Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/css \
+/Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/data \
 /Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/icon.png \
 /Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/img \
 /Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/index.html \
@@ -36,8 +37,15 @@
 /Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/spec \
 /Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/spec.html \
 /Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/css/index.css \
+/Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/css/jquery.mobile-1.4.5.min.css \
+/Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/data/tsdata.csv \
 /Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/img/logo.png \
 /Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/js/index.js \
+/Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/js/vendor \
+/Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/js/vendor/csvToArray.v2.1.min.js \
+/Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/js/vendor/jquery-1.9.1.min.js \
+/Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/js/vendor/jquery.min.js \
+/Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/js/vendor/jquery.mobile-1.4.5.min.js \
 /Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/plugins/org.apache.cordova.device-motion \
 /Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/plugins/org.apache.cordova.device-orientation \
 /Users/mpelland/Documents/working/CC/HackAThought/repo/phonegap-src/checkitoff/platforms/android/assets/www/plugins/org.apache.cordova.device-motion/www \

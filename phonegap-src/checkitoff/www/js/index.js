@@ -63,5 +63,12 @@ var app = {
         // receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+
+
+    //*********************************** MARC ******************************//
+
+    testFunction: function() {
+        console.log("GET OUT OF MY HOUSE");
     }
 };
