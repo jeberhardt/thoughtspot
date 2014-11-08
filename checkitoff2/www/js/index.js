@@ -17,6 +17,8 @@
  * under the License.
  */
 var app = {
+    map: null,
+
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -34,7 +36,14 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
+
+        $("#map-link").on("tap", function(e){
+            e.preventDefault();
+            $.mobile.changePage("#maps"), { transition: "none", reverse: false, changeHash: true};
+            console.log("SHOW THE MAP BITCHES");
+            navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
+        });
+        
     },
     onSuccess: function(pos) {
         var lat = pos.coords.latitude;
@@ -48,8 +57,9 @@ var app = {
             streetViewControl: false
         };
 
-        var map = new google.maps.Map(document.getElementById("geolocation"), opts);
-        app.initMaps();
+        app.map = new google.maps.Map(document.getElementById("geolocation"), opts);
+
+        app.initMaps(latlon);
 
     },
     onError: function(error) {
@@ -70,12 +80,18 @@ var app = {
 
     //*********************************** MARC ******************************//
 
-    initMaps: function() {
-        console.log("GET OUT OF MY HOUSE");
-        data.loadThoughtSpotData();
+    initMaps: function(pos) {
+        // console.log("GET OUT OF MY HOUSE");
+        dataModel.loadThoughtSpotData();
+        console.log("init maps");
+        var marker = new google.maps.Marker({
+            position: pos,
+            map: app.map,
+            title:"you be here!"
+        });
     },
 
     onDataLoaded: function() {
-
+        console.log("DATA LOADED");
     }
 };
