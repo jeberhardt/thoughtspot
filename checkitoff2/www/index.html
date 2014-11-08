@@ -31,15 +31,17 @@
         <title>Check It</title>
     </head>
     <body>
-        <div id="mainmenu" data-role="page">
-            <div data-role="header">
-                <h1>welcome</h1>
-            </div>
-            <div data-role="content">
-                <div>Walk It</div>
-                <a href="#maps"><button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location">walk it off</button></a>
+        <div data-role="page" id="mainmenu-page">
+
+            <div id="mainmenu" data-role="content">
+                <div><a href="#maps">Walk It</a></div>
+                <div>Eat It</div>
+                <div>Talk It</div>
+                <div>Toss It</div>
+                <div>Read It</div>
             </div>
         </div>
+        
         <div id="maps" data-role="page">
             <div data-role="content">
                 <div id="geolocation" style="width: 100%; height: 100%; min-height: 200px; min-height: 300px;"></div>
@@ -56,5 +58,6 @@
         <script type="text/javascript">
             app.initialize();
         </script>
+            
     </body>
 </html>
