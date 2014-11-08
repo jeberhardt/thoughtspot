@@ -19,6 +19,18 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
+<<<<<<< HEAD
+=======
+    <feature name="Accelerometer">
+        <param name="ios-package" value="CDVAccelerometer" />
+    </feature>
+    <feature name="Compass">
+        <param name="ios-package" value="CDVCompass" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+>>>>>>> FETCH_HEAD
     <name>checkitoff</name>
     <description>
         Hello World sample application that responds to the deviceready event.

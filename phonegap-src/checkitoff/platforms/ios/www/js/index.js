@@ -34,6 +34,27 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+<<<<<<< HEAD
+=======
+        navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
+    },
+    onSuccess: function(pos) {
+        var lat = pos.coords.latitude;
+        var lon = pos.coords.longitude;
+        var latlon = new google.maps.LatLng(lat, lon);
+
+        var opts = {
+            center: latlon,
+            zoom: 16,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("geolocation"), opts);
+
+    },
+    onError: function(error) {
+        alert("error bitches: " + error.code + "\nmessage: " + error.message + "\n");
+>>>>>>> FETCH_HEAD
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
