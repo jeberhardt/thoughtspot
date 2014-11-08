@@ -34,11 +34,11 @@
         <div data-role="page" id="mainmenu-page">
 
             <div id="mainmenu" data-role="content">
-                <div id="walkitButton"><a id="map-link">Walk It</a></div>
-                <div><a id="eatit-link">Eat It</a></div>
-                <div><a id="talkit-link">Talk It</a></div>
-                <div><a id="tossit-link">Toss It</a></div>
-                <div><a id="readit-link">Read It</a></div>
+                <div id="walkitBackground"><a id="map-link">Walk It</a></div>
+                <div id="eatitBackground"><a id="eatit-link">Eat It</a></div>
+                <div id="talkitBackground"><a id="talkit-link">Talk It</a></div>
+                <div id="tossitBackground"><a id="tossit-link">Toss It</a></div>
+                <div id="readitBackground"><a id="readit-link">Read It</a></div>
             </div>
         </div>
 
@@ -54,7 +54,16 @@
             </div>
             <div data-role="content" data-add-back-btn="true">
                 <div>Call Service</div>
-                <div><a id="contact-link">Contacts</a></div>
+                <div>
+                <a id="contact-link">Contacts</a>
+                <ul id="contactsList" data-role="listview" data-filter="true" data-filter-placeholder="Search Contacts..." data-inset="true">
+                <li>
+                    <h2>Loading Contacts..</h2>
+                </li>
+ 
+                </ul>
+                </div>
+
                 <div>Call 911</div>
             </div>            
         </div>
@@ -91,10 +100,11 @@
         <script src="js/vendor/csvToArray.v2.1.min.js"></script>
         <script src="js/vendor/jquery.dotdotdot.min.js"></script>
         <script type="text/javascript" src="js/utils.js"></script>
+        <script type="text/javascript" src="js/contacts.displist.js"></script>
+        <script type="text/javascript" src="js/contacts.form.js"></script>
         <script type="text/javascript" src="js/walkit.js"></script>
         <script type="text/javascript" src="js/talkit.js"></script>
         <script type="text/javascript" src="js/dataModel.js"></script>
-        <script type="text/javascript" src="js/talkit.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
