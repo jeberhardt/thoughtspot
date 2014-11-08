@@ -76,9 +76,9 @@ body {
     font-size: 1.3em;
     padding: 5%; 
 }
-
+.ui-header .ui-title { font-size: 2em; }
 #maps .ui-content { height: 92%; }
-#maps.ui-page-theme-a .ui-bar-inherit { height: 8%; }
+#maps.ui-page-theme-a .ui-bar-inherit { height: 8%; background-color: #fbb03b; }
 
 /** BACK  BUTTON **/
 .ui-page .ui-header .ui-toolbar-back-btn {
