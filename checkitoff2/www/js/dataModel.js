@@ -31,9 +31,7 @@ var dataModel = {
 			if (ARG_dataset[i].CATEGORY.indexOf(ARG_cat) != -1)  inCategory.push(ARG_dataset[i])
 		}
 		return inCategory;
-	getInCategory: function(ARG_cat) {
-
-		return [];
+	
 	},
 
 

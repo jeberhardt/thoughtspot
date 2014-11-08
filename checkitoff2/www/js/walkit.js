@@ -76,7 +76,9 @@ var walk = {
     },
     onMapDataLoaded: function() {
         var localStuff = dataModel.getWithinDistance(dataModel.data, 0.6, walk.latlon.lat(), walk.latlon.lng());
-        walk.showListWithMap(localStuff);
+        var localStuffCategorized = dataModel.getInCategory(localStuff, "Recreation and Culture");
+        walk.showListWithMap(localStuffCategorized);
+
     },
     showListWithMap:function(locations) {
 
