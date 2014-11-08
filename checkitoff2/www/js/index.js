@@ -102,7 +102,24 @@ var app = {
     },
 
     onDataLoaded: function() {
-        var localStuff = dataModel.getWithinDistance(dataModel.data, 10, app.latlon.lat(), app.latlon.lng());
-        console.log(localStuff);
+        var localStuff = dataModel.getWithinDistance(dataModel.data, 1, app.latlon.lat(), app.latlon.lng());
+        app.showListWithMap(localStuff);
+    },
+
+    showListWithMap:function(locations) {
+        $("#map-listing").html('');
+        for (var i in locations) {
+            var lat = locations[i].LATITUDE;
+            var lon = locations[i].LONGITUDE;
+            var latlon = new google.maps.LatLng(lat, lon);
+
+            var marker = new google.maps.Marker({
+                position: latlon,
+                map: app.map
+                // title:"you be here!"
+            });
+            var div = "<div class='location-list-item'>" + locations[i]["INCIDENT TITLE"] + "</div>";
+            $("#mapListing").append($(div));
+        }
     }
 };

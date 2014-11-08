@@ -29,10 +29,12 @@ var dataModel = {
 		return [];
 	},
 
+	
+
 	getWithinDistance: function(ARG_dataset, ARG_distance, ARG_startLat, ARG_startLon) {
 		var closePlaces = [];
 		for (var i in ARG_dataset) {
-			var distance = Utils.getDistance(ARG_startLat, ARG_startLon, ARG_dataset[i].LATITUDE, ARG_dataset[i].LONGITUDE);
+			var distance = Utils.calcDistanceBetween(ARG_startLat, ARG_startLon, ARG_dataset[i].LATITUDE, ARG_dataset[i].LONGITUDE);
 			if (distance < ARG_distance) {
 				closePlaces.push (ARG_dataset[i]);
 			}
