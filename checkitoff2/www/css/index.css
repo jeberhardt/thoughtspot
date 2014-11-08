@@ -16,6 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+a { text-shadow:none !important; }
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
@@ -134,4 +137,48 @@ h1 {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+}
+/*
+#walkitButton {
+    width: 100px;
+    height: 100px;
+    min-height: 100px;
+    background: red;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+*/
+
+#eatit-link, #map-link, #talkit-link, #tossit-link, #readit-link {
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    font-size: 15px;
+    color:white;
+    padding-top:45px;
+    padding-bottom:45px;
+    padding-left:25px;
+    padding-right:25px;
+    line-height: 60px;
+}
+
+#map-link {
+    background: #fbb03b;
+}
+
+#eatit-link {
+    background: #0071bc;
+}
+
+#talkit-link {
+    background: #93278f;
+}
+
+#tossit-link {
+    background: #ed1e79;
+}
+
+#readit-link {
+    background: #009245;
 }

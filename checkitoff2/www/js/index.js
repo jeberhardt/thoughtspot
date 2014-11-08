@@ -54,6 +54,11 @@ var app = {
             e.preventDefault();
             $.mobile.changePage("#readit"), { transition: "slidefade", reverse: false, changeHash: true};
         });
+
+        $("#talkit-link").on("tap", function(e){
+            e.preventDefault();
+            $.mobile.changePage("#talkit"), { transition: "slidefade", reverse: false, changeHash: true};
+        });        
         
     },
     onSuccess: function(pos) {
