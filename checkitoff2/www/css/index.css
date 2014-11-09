@@ -45,7 +45,8 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
+    text-transform:none;
+    text-shadow:none;
     width:100%;
     min-width: 320px;
     min-height: 480px;
