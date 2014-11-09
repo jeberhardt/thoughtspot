@@ -360,7 +360,6 @@ a {
 }
 
 #romanceBookBackground > a, #comedyBookBackground > a, #adventureBookBackground > a, #scifiBookBackground > a {
-    line-height: 5em;
     font-size: 1em;
 }
 
