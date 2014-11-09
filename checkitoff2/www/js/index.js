@@ -37,6 +37,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         
+
         TweenLite.from($("#walkitBackground"), 0.5, { scaleX: 0, scaleY: 0 });
 
         $("#map-link").on("tap", function(e){
@@ -57,10 +58,15 @@ var app = {
             talkitPage.initialize(); 
         }); 
 
+        // $("#tossit-link").on("tap", function(e){
+        //     e.preventDefault();
+        //     // YoutubeVideoPlayer.openVideo('7xEX-48RHCY') ;
+        // });
+
         $("#addit-link").on("tap", function(e){
             e.preventDefault();
-            $.mobile.changePage("#add"), { transition: "slidefade", reverse: false, changeHash: true};
-            additPage.initialize(); 
+            $.mobile.changePage("#addit"), { transition: "slidefade", reverse: false, changeHash: true};
+            // additPage.initialize();
         });
 
         
