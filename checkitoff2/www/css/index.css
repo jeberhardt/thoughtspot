@@ -80,6 +80,9 @@ body {
 #maps .ui-content { height: 92%; }
 #maps.ui-page-theme-a .ui-bar-inherit { height: 8%; background-color: #fbb03b; }
 
+#eatit .ui-content { height: 92%; }
+#eatit.ui-page-theme-a .ui-bar-inherit { height: 8%; background-color: rgb(0, 113, 0); }
+
 .ui-page-theme-a .ui-bar-inherit{
     height: 8%;
     border: 0;
@@ -114,6 +117,10 @@ body {
     display: block;
     width: 100%;
     border-bottom: 1px solid white;
+}
+
+#eatit .location-list-item {
+    background-color: rgb(0,113,0);
 }
 .location-list-item p {
     padding: 10px;
@@ -229,7 +236,6 @@ h1 {
     color:white;
     border-style: dashed;
     border-width: 0.2rem;    
-    line-height: 8em;
     position: absolute;
     left: 0.3rem;
     top: 0.3rem;
@@ -250,7 +256,7 @@ h1 {
     -moz-border-radius: 3.5rem;
     -webkit-border-radius: 3.5rem;
     border-radius: 3.5rem;
-    line-height: 11em;
+    line-height: 12em;
 }
 
 #talkit-link {
@@ -259,7 +265,7 @@ h1 {
     -moz-border-radius: 4.5rem;
     -webkit-border-radius: 4.5rem;
     border-radius: 4.5rem;
-    line-height: 11em;
+    line-height: 15em;
 }
 
 #tossit-link {
@@ -268,7 +274,7 @@ h1 {
     -moz-border-radius: 3.5rem;
     -webkit-border-radius: 3.5rem;
     border-radius: 3.5rem;  
-    line-height: 11em;
+    line-height: 12em;
 }
 
 #readit-link {
@@ -277,7 +283,7 @@ h1 {
     -moz-border-radius: 5rem;
     -webkit-border-radius: 5rem;
     border-radius: 5rem;
-    line-height: 11em;
+    line-height: 17em;
 }
 
 #addit-link {
@@ -286,12 +292,27 @@ h1 {
     -moz-border-radius: 2.5rem;
     -webkit-border-radius: 2.5rem;
     border-radius: 2.5rem;
-    line-height: 8em;
+    line-height: 5em;
 }
 
 #mainmenu > div {
     color: white;
     position: absolute;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+#mainmenu > div.loading {
+    width: 0;
+    height: 0;
+}
+
+#mainmenu > div > img {
+    width: 90%;
+    position: absolute;
+    margin-left: 5%;
 }
 
 #walkitBackground{
@@ -314,9 +335,9 @@ h1 {
     border-radius: 4rem;
     font-size: 10rem;
     color:white;
-    background: #007100;
+    background: rgba(0, 113, 0, 0.8);
     position: absolute;
-    left:12rem;
+    left: 12rem;
     top: 1rem;
 }
 
@@ -327,7 +348,7 @@ h1 {
     -webkit-border-radius: 5rem;
     border-radius: 5rem;
     font-size: 11rem;
-    background: #93278f;
+    background: rgba(147, 39, 143, 0.8);
     left: 13rem;
     top: 11rem;
 }
@@ -339,7 +360,7 @@ h1 {
     -webkit-border-radius: 4rem;
     border-radius: 4rem;
     font-size: 10rem;
-    background: #ed1e79;
+    background: rgba(237, 30, 121, 0.8);
     left: 7rem;
     top: 19rem;
 }
@@ -351,7 +372,7 @@ h1 {
     -webkit-border-radius: 5.5rem;
     border-radius: 5.5rem;
     font-size: 10rem;
-    background: #009245;
+    background: rgba(0, 146, 69, 0.8);
     left: 15rem;
     top: 23rem;
 }
@@ -363,7 +384,7 @@ h1 {
     -webkit-border-radius: 3rem;
     border-radius: 3rem;
     font-size: 10rem;
-    background: #009245;
+    background: rgba(0, 0, 0, 0.8);
     left: 2rem;
     top: 29rem;
 }
@@ -371,3 +392,5 @@ h1 {
 .bookcontent {
     background-size:100%;
 }
+
+

@@ -68,7 +68,8 @@ var app = {
             e.preventDefault();
             $.mobile.changePage("#add"), { transition: "slidefade", reverse: false, changeHash: true};
             additPage.initialize(); 
-        });        
+        });
+
         
     },
     // Update DOM on a Received Event

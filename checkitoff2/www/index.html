@@ -36,18 +36,24 @@
                 <h1>Do it</h1>
             </div>
             <div id="mainmenu" data-role="content">
-                <div id="walkitBackground"><a id="map-link"><img src="img/icon_set-toss.png">Walk It</a></div>
-                <div id="eatitBackground"><a id="eatit-link">Eat It</a></div>
-                <div id="talkitBackground"><a id="talkit-link">Talk It</a></div>
-                <div id="tossitBackground"><a id="tossit-link">Toss It</a></div>
-                <div id="readitBackground"><a id="readit-link">Read It</a></div>
+                <div id="walkitBackground"><img src="img/icon_set-walk.png"><a id="map-link">Walk It</a></div>
+                <div id="eatitBackground"><img src="img/icon_set-eat.png"><a id="eatit-link">Eat It</a></div>
+                <div id="talkitBackground"><img src="img/icon_set-talk.png"><a id="talkit-link">Talk It</a></div>
+                <div id="tossitBackground"><img src="img/icon_set-toss.png"><a id="tossit-link">Toss It</a></div>
+                <div id="readitBackground"><img src="img/icon_set-read.png"><a id="readit-link">Read It</a></div>
                 <div id="additBackground"><a id="addit-link">Add It</a></div>
             </div>
         </div>
 
         <div id="eatit" data-role="page">
             <div data-role="header" data-add-back-btn="true">
-                <h1>Eat It</h1>
+                <h1>eat it off</h1>
+            </div>
+
+            <div data-role="content">
+                <div id="eat-message-area">Eating healthy increases mood and vitality.  Here are some heathly places to grab a bite near you.</div>
+                <div id="eat-geolocation"></div>
+                <div id="eat-mapListing"></div>
             </div>
         </div>
 
@@ -101,9 +107,11 @@
         <script src="js/vendor/jquery.min.js"></script>
         <script src="js/vendor/jquery.mobile-1.4.5.min.js"></script>
         <script src="js/vendor/csvToArray.v2.1.min.js"></script>
-        <script src="js/vendor/jquery.dotdotdot.min.js"></script>
+        
         <script type="text/javascript" src="js/utils.js"></script>
         <script type="text/javascript" src="js/walkit.js"></script>
+        <script type="text/javascript" src="js/eatitPage.js"></script>
+        <script type="text/javascript" src="js/additPage.js"></script>
         <script type="text/javascript" src="js/talkit.js"></script>
         <script type="text/javascript" src="js/dataModel.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
