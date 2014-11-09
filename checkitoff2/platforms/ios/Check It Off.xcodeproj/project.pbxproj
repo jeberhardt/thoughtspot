@@ -52,6 +52,8 @@
 		0055573F117F450C8F2C7DC5 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2574CAFF2A94E7589036891 /* MediaPlayer.framework */; };
 		84F30A491E484CF2AB54EAC2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6F0B532A0A4A08B26E24ED /* AVFoundation.framework */; };
 		F8BC857890D143DDBF776441 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4ACE72CA5584469BB1A32DD /* JavaScriptCore.framework */; };
+		E3E0178B7EA24ECE8C30E0F8 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C8BB5DDFF14E4B80722E9A /* AddressBook.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B8D80429375E44CAAAABFE74 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA3687DEC7D4443BAF41E84 /* AddressBookUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +146,8 @@
 		D2574CAFF2A94E7589036891 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "MediaPlayer.framework"; path = "System/Library/Frameworks/MediaPlayer.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		AF6F0B532A0A4A08B26E24ED /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		B4ACE72CA5584469BB1A32DD /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "JavaScriptCore.framework"; path = "System/Library/Frameworks/JavaScriptCore.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		03C8BB5DDFF14E4B80722E9A /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AddressBook.framework"; path = "System/Library/Frameworks/AddressBook.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		2BA3687DEC7D4443BAF41E84 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AddressBookUI.framework"; path = "System/Library/Frameworks/AddressBookUI.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 				0055573F117F450C8F2C7DC5 /* MediaPlayer.framework in Frameworks */,
 				84F30A491E484CF2AB54EAC2 /* AVFoundation.framework in Frameworks */,
 				F8BC857890D143DDBF776441 /* JavaScriptCore.framework in Frameworks */,
+				E3E0178B7EA24ECE8C30E0F8 /* AddressBook.framework in Frameworks */,
+				B8D80429375E44CAAAABFE74 /* AddressBookUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +263,8 @@
 				D2574CAFF2A94E7589036891 /* MediaPlayer.framework */,
 				AF6F0B532A0A4A08B26E24ED /* AVFoundation.framework */,
 				B4ACE72CA5584469BB1A32DD /* JavaScriptCore.framework */,
+				03C8BB5DDFF14E4B80722E9A /* AddressBook.framework */,
+				2BA3687DEC7D4443BAF41E84 /* AddressBookUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
