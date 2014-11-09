@@ -27,6 +27,7 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
+        $.mobile.defaultPageTransition = 'slidefade';
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
@@ -48,16 +49,6 @@ var app = {
             e.preventDefault();
             $.mobile.changePage("#eatit"), { transition: "slidefade", reverse: false, changeHash: true};
             eatitPage.initialize();
-        });
-
-        $("#readit-link").on("tap", function(e){
-            e.preventDefault();
-            $.mobile.changePage("#readit"), { transition: "slidefade", reverse: false, changeHash: true};
-        });
-
-        $("#tossit-link").on("tap", function(e){
-            e.preventDefault();
-            $.mobile.changePage("#tossit"), { transition: "slidefade", reverse: false, changeHash: true};
         });        
 
         $("#talkit-link").on("tap", function(e){
