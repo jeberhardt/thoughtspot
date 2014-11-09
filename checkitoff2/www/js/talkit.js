@@ -21,7 +21,6 @@ var talkitPage = {
         $("#contact-link").on("tap", function(e){
             e.preventDefault();
             console.log("Whatever");
-            $("body").addClass('ui-disabled').css("background", "#000");
             $.mobile.loading("show");
             var options = new ContactFindOptions();
             options.filter = "";
