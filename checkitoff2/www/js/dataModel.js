@@ -2,7 +2,7 @@ var dataModel = {
 	
 	data: [],
 
-	loadThoughtSpotData: function() {
+	loadThoughtSpotData: function(callback) {
         $.ajax({
             url: "data/tsdata.csv",
             dataType: 'text',
@@ -19,7 +19,8 @@ var dataModel = {
             	}
 
 	        }
-            walk.onMapDataLoaded();
+	        console.log(dataModel.data);
+            callback();
 
        	});
     },
@@ -33,8 +34,6 @@ var dataModel = {
 		return inCategory;
 	
 	},
-
-
 
 	getWithinDistance: function(ARG_dataset, ARG_distance, ARG_startLat, ARG_startLon) {
 		var closePlaces = [];

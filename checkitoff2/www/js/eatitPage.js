@@ -5,12 +5,15 @@ var eatitPage = {
     directionsService: null,
     focus: [],
     infowindow: null,
-    markerImage: 'img/recreational_icon.png',
+    markerImage: 'img/diet_icon.png',
     curLocMarkerImage: 'img/current_location.png',
+
 	initialize: function() {
 		navigator.geolocation.getCurrentPosition(eatitPage.onMapSuccess, eatitPage.onMapError);
 	},
-
+    destroy: function() {
+        console.log("DESTROY THIS VIEW");
+    },
     onMapSuccess: function(pos) {
         var lat = pos.coords.latitude;
         var lon = pos.coords.longitude;
@@ -26,17 +29,17 @@ var eatitPage = {
             zoomControl: true,
         };
 
-        eatitPage.map = new google.maps.Map(document.getElementById("geolocation"), opts);
+        eatitPage.map = new google.maps.Map(document.getElementById("eat-geolocation"), opts);
 
         eatitPage.initMaps(eatitPage.latlon);
-        eatitPage.getWeather();
+        // eatitPage.getWeather();
     },
     onMapError: function(error) {
         alert("error : " + error.code + "\nmessage: " + error.message + "\n");
     },
 	initMaps: function(pos) {
 
-        dataModel.loadThoughtSpotData();
+        dataModel.loadThoughtSpotData(eatitPage.onMapDataLoaded);
         
         var marker = new google.maps.Marker({
             position: pos,
@@ -64,25 +67,25 @@ var eatitPage = {
 	},
 
     getWeather: function() {
-    	$.ajax({
-		  	url : "http://api.wunderground.com/api/ce47fb1f679fe7b3/geolookup/q/" + eatitPage.latlon.lat() + "," + eatitPage.latlon.lng() + ".json",
-		  	dataType : "jsonp",
-		  	success : function(parsed_json) {
-		  		// var location = parsed_json['location']['city'];
-		  		// var temp_f = parsed_json['current_observation']['temp_f'];
-		  		// alert("Current temperature in " + location + " is: " + temp_f);
-		  	}
-		});
+  //   	$.ajax({
+		//   	url : "http://api.wunderground.com/api/ce47fb1f679fe7b3/geolookup/q/" + eatitPage.latlon.lat() + "," + eatitPage.latlon.lng() + ".json",
+		//   	dataType : "jsonp",
+		//   	success : function(parsed_json) {
+		//   		// var location = parsed_json['location']['city'];
+		//   		// var temp_f = parsed_json['current_observation']['temp_f'];
+		//   		// alert("Current temperature in " + location + " is: " + temp_f);
+		//   	}
+		// });
     },
     onMapDataLoaded: function() {
-        var localStuff = dataModel.getWithinDistance(dataModel.data, 0.6, eatitPage.latlon.lat(), eatitPage.latlon.lng());
+        var localStuff = dataModel.getWithinDistance(dataModel.data, 2, eatitPage.latlon.lat(), eatitPage.latlon.lng());
         var localStuffCategorized = dataModel.getInCategory(localStuff, "Healthy Diet");
         eatitPage.showListWithMap(localStuffCategorized);
 
     },
     showListWithMap:function(locations) {
 
-        $("#map-listing").html('');
+        $("#eat-mapListing").html('');
         var pts = [];
 
         for (var i in locations) {
@@ -100,21 +103,20 @@ var eatitPage = {
             eatitPage.attachMessage(marker, locations[i]["INCIDENT TITLE"]);
 
             var div = "<div class='location-list-item'><p>" + locations[i]["INCIDENT TITLE"] + "<br>" + locations[i]["Address 1"] + "</p></div>";
-            $("#mapListing").append($(div));
+            $("#eat-mapListing").append($(div));
             
-
         }
-
+// console.log(locations);
         var loc1 = locations[Math.floor(Math.random() * (locations.length -1))];
         var loc2 = locations[Math.floor(Math.random() * (locations.length -1))];
 
         pts.push({ location: new google.maps.LatLng(loc1.LATITUDE, loc1.LONGITUDE), stopover: false });
         pts.push({ location: new google.maps.LatLng(loc2.LATITUDE, loc2.LONGITUDE), stopover: false });
 
-        eatitPage.generateeatitPage.oute(eatitPage.latlon, pts);
+        eatitPage.generateWalkRoute(eatitPage.latlon, pts);
     },
 
-    generateeatitPage.oute: function(start, pts) {
+    generateWalkRoute: function(start, pts) {
         eatitPage.directionsService = new google.maps.DirectionsService();
         eatitPage.directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
 		
@@ -132,7 +134,7 @@ var eatitPage = {
             destination: start,
             waypoints: pts,
             optimizeWaypoints: true,
-            travelMode: google.maps.TravelMode.eatitPage.NG
+            travelMode: google.maps.TravelMode.WALKING
         };
 
         eatitPage.directionsService.route(request, function(response, status) {

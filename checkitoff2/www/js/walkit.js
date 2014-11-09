@@ -29,14 +29,14 @@ var walk = {
         walk.map = new google.maps.Map(document.getElementById("geolocation"), opts);
 
         walk.initMaps(walk.latlon);
-        walk.getWeather();
+        // walk.getWeather();
     },
     onMapError: function(error) {
         alert("error : " + error.code + "\nmessage: " + error.message + "\n");
     },
 	initMaps: function(pos) {
 
-        dataModel.loadThoughtSpotData();
+        dataModel.loadThoughtSpotData(walk.onMapDataLoaded);
         
         var marker = new google.maps.Marker({
             position: pos,
@@ -82,7 +82,7 @@ var walk = {
     },
     showListWithMap:function(locations) {
 
-        $("#map-listing").html('');
+        $("#mapListing").html('');
         var pts = [];
 
         for (var i in locations) {
@@ -101,8 +101,7 @@ var walk = {
 
             var div = "<div class='location-list-item'><p>" + locations[i]["INCIDENT TITLE"] + "<br>" + locations[i]["Address 1"] + "</p></div>";
             $("#mapListing").append($(div));
-            
-
+    
         }
 
         var loc1 = locations[Math.floor(Math.random() * (locations.length -1))];
