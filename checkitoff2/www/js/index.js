@@ -35,6 +35,8 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        
+        TweenLite.from($("#walkitBackground"), 0.5, { scaleX: 0, scaleY: 0 });
 
         $("#map-link").on("tap", function(e){
             e.preventDefault();

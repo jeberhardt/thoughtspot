@@ -62,11 +62,11 @@ body {
                                    /* offset horizontal: half of text area width */
 }
 
-#geolocation { height: 45%; width: 100%; }
+#geolocation, #eat-geolocation { height: 45%; width: 100%; }
 
-#mapListing { width: 100%; height: 42%; overflow-y: scroll;}
+#mapListing, #eat-mapListing { width: 100%; height: 42%; overflow-y: scroll;}
 
-#message-area { 
+#message-area, #eat-message-area { 
     width: 90%;
     display: block;
     background: #fbb03b;
@@ -75,6 +75,10 @@ body {
     text-shadow: none;
     font-size: 1.3em;
     padding: 5%; 
+}
+
+#eat-message-area { 
+    background-color: rgb(0,113,0);
 }
 
 #maps .ui-content { height: 92%; }
