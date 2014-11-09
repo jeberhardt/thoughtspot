@@ -199,7 +199,7 @@ h1 {
 .ui-header .ui-title { padding: 0.2em 0; }
 .ui-header { overflow: visible; }
 
-#mainmenu {
+#mainmenu, #readitPage {
     background-image: url(../img/Cat_Toss_Background.jpg);
     /*background-size: "100%";*/
     min-width: 320px;

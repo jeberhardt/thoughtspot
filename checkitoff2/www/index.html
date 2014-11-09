@@ -31,6 +31,8 @@
         <title>Check It</title>
     </head>
     <body>
+    
+        <!-- MAINMENU PAGE -->
         <div data-role="page" id="mainmenu-page">
             <div data-role="header">
                 <h1>Do it</h1>
@@ -45,17 +47,21 @@
             </div>
         </div>
 
+
+        <!-- TOSSIT PAGE -->
         <div id="eatit" data-role="page">
             <div data-role="header" data-add-back-btn="true">
                 <h1>Eat It</h1>
             </div>
         </div>
 
+
+        <!-- TALKIT PAGE -->
         <div id="talkit" data-role="page">
             <div data-role="header" data-add-back-btn="true">
                 <h1>Talk It</h1>
             </div>
-            <div data-role="content" data-add-back-btn="true">
+            <div data-role="content">
                 <div>Call Service</div>
                 <div>
                 <a id="contact-link">Contacts</a>
@@ -71,16 +77,59 @@
             </div>            
         </div>
 
+        <!-- TOSSIT PAGE -->
         <div id="tossit" data-role="page">
             <div data-role="header" data-add-back-btn="true">
                 <h1>Toss It</h1>
             </div>
-        </div>        
+        </div> 
+
+        <!-- READITBOOKROMANCE PAGE -->
+        <div id="readitbookRomance" data-role="page">
+            <div data-role="header" data-add-back-btn="true">
+                <h1>Romance</h1>
+                <div class="bookcontent" data-role="content">
+                    IN 1928, when I was nine, I belonged, with maximum esprit de corps, to an organization known as the Comanche Club. Every schoolday afternoon at three o’clock, twenty-five of us Comanches were picked up by our Chief outside the boys’ exit of P. S. 165, on 109th Street near Amsterdam Avenue. We then pushed and punched our way into the Chief’s reconverted commercial bus, and he drove us (according to his financial arrangement with our parents) over to Central Park. The rest of the afternoon, weather permitting, we played football or soccer or baseball, depending (very loosely) on the season. Rainy afternoons, the Chief invariably took us either to the Museum of Natural History or to the Metropolitan Museum of Art.
+                </div>
+            </div>
+        </div>
+
+        <!-- readitbookAdventure PAGE -->
+        <div id="readitbookAdventure" data-role="page">
+            <div data-role="header" data-add-back-btn="true">
+                <h1>Adventure</h1>
+            </div>
+        </div>
+
+
+        <!-- readitbookComedy PAGE -->
+        <div id="readitbookComedy" data-role="page">
+            <div data-role="header" data-add-back-btn="true">
+                <h1>Comedy</h1>
+            </div>
+        </div>
+
+        <!-- readitbookSciFi PAGE -->
+        <div id="readitbookSciFi" data-role="page">
+            <div data-role="header" data-add-back-btn="true">
+                <h1>SciFi</h1>
+            </div>
+            <div data-role="content">
+                the sci fi book goes here.
+            </div>           
+        </div>                  
         
+        <!-- READIT PAGE -->
         <div id="readit" data-role="page">
             <div data-role="header" data-add-back-btn="true">
                 <h1>Read It</h1>
             </div>
+            <div id="readitPage" data-role="content">
+            <div id="wattPadLogo"><img src="./img/wattpad_icon-01.png" width="200" align="right"></div>
+            <div><a href="#readitbookRomance">Romance</a></div>
+            <div><a href="#readitbookAdventure">Adventure</a></div>
+            <div><a href="#readitbookComedy">Comedy</a></div>
+            <div><a href="#readitbookSciFi">Sci-Fi</a></div>
         </div>
 
         <div id="maps" data-role="page">
@@ -104,6 +153,7 @@
         <script src="js/vendor/jquery.dotdotdot.min.js"></script>
         <script type="text/javascript" src="js/utils.js"></script>
         <script type="text/javascript" src="js/walkit.js"></script>
+        <script type="text/javascript" src="js/readit.js"></script>
         <script type="text/javascript" src="js/talkit.js"></script>
         <script type="text/javascript" src="js/dataModel.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
