@@ -64,15 +64,15 @@ var walk = {
 	},
 
     getWeather: function() {
-    	$.ajax({
-		  	url : "http://api.wunderground.com/api/ce47fb1f679fe7b3/geolookup/q/" + walk.latlon.lat() + "," + walk.latlon.lng() + ".json",
-		  	dataType : "jsonp",
-		  	success : function(parsed_json) {
-		  		// var location = parsed_json['location']['city'];
-		  		// var temp_f = parsed_json['current_observation']['temp_f'];
-		  		// alert("Current temperature in " + location + " is: " + temp_f);
-		  	}
-		});
+  //   	$.ajax({
+		//   	url : "http://api.wunderground.com/api/ce47fb1f679fe7b3/geolookup/q/" + walk.latlon.lat() + "," + walk.latlon.lng() + ".json",
+		//   	dataType : "jsonp",
+		//   	success : function(parsed_json) {
+		//   		// var location = parsed_json['location']['city'];
+		//   		// var temp_f = parsed_json['current_observation']['temp_f'];
+		//   		// alert("Current temperature in " + location + " is: " + temp_f);
+		//   	}
+		// });
     },
     onMapDataLoaded: function() {
         var localStuff = dataModel.getWithinDistance(dataModel.data, 0.6, walk.latlon.lat(), walk.latlon.lng());
@@ -136,6 +136,7 @@ var walk = {
 
         walk.directionsService.route(request, function(response, status) {
             if (status == google.maps.DirectionsStatus.OK) {
+                console.log(response);
                 walk.directionsDisplay.setDirections(response);
             }
         });
