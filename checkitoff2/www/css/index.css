@@ -153,7 +153,7 @@ body {
 
 .ui-mobile .ui-page-active { height: 100%; }
 
-#mainmenu { height: 100%; }
+#mainmenu { height: 92%; }
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {

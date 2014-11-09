@@ -692,3 +692,53 @@ https://developer.apple.com/icloud/documentation/data-storage/
 2014-11-09 10:27:13.402 Check It Off[62727:3610461] Finished load of: file:///Users/mpelland/Library/Developer/CoreSimulator/Devices/E702CE11-4313-447E-8A80-A61B13AA95D3/data/Containers/Bundle/Application/7090552E-6A24-4E62-AAAD-A6D235A96AEE/Check%20It%20Off.app/www/index.html
 2014-11-09 10:27:39.200 Check It Off[62727:3610461] locationManager::didFailWithError (null)
 2014-11-09 10:27:59.130 Check It Off[62727:3610461] locationManager::didFailWithError (null)
+2014-11-09 10:53:34.434 Check It Off[65991:3632219] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-09 10:53:34.436 Check It Off[65991:3632219] Multi-tasking -> Device: YES, App: YES
+2014-11-09 10:53:34.444 Check It Off[65991:3632219] Unlimited access to network resources
+2014-11-09 10:53:34.448 Check It Off[65991:3632219] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-09 10:53:35.142 Check It Off[65991:3632219] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-11-09 10:53:35.142 Check It Off[65991:3632219] [CDVTimer][statusbar] 0.223994ms
+2014-11-09 10:53:35.143 Check It Off[65991:3632219] [CDVTimer][TotalPluginStartup] 0.427008ms
+2014-11-09 10:53:35.326 Check It Off[65991:3632219] Resetting plugins due to page load.
+2014-11-09 10:53:37.078 Check It Off[65991:3632219] Finished load of: file:///Users/mpelland/Library/Developer/CoreSimulator/Devices/E702CE11-4313-447E-8A80-A61B13AA95D3/data/Containers/Bundle/Application/BA4A1A26-1301-4CD8-BE0F-C00672C71ADF/Check%20It%20Off.app/www/index.html
+2014-11-09 10:53:37.275 Check It Off[65991:3632219] CDVPlugin class CDVStatusBar (pluginName: StatusBar) does not exist.
+2014-11-09 10:53:37.275 Check It Off[65991:3632219] ERROR: Plugin 'StatusBar' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-11-09 10:53:37.276 Check It Off[65991:3632219] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "StatusBar1513693660",
+  "StatusBar",
+  "_ready",
+  [
+
+  ]
+]
+2014-11-09 10:56:03.659 Check It Off[66719:3635584] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-09 10:56:03.661 Check It Off[66719:3635584] Multi-tasking -> Device: YES, App: YES
+2014-11-09 10:56:03.669 Check It Off[66719:3635584] Unlimited access to network resources
+2014-11-09 10:56:03.672 Check It Off[66719:3635584] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-09 10:56:04.185 Check It Off[66719:3635584] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-11-09 10:56:04.185 Check It Off[66719:3635584] [CDVTimer][statusbar] 0.247002ms
+2014-11-09 10:56:04.186 Check It Off[66719:3635584] [CDVTimer][TotalPluginStartup] 0.559032ms
+2014-11-09 10:56:04.285 Check It Off[66719:3635584] Resetting plugins due to page load.
+2014-11-09 10:56:05.697 Check It Off[66719:3635584] Finished load of: file:///Users/mpelland/Library/Developer/CoreSimulator/Devices/E702CE11-4313-447E-8A80-A61B13AA95D3/data/Containers/Bundle/Application/3BFE015B-A6B6-47A4-9054-6A29BE2B029A/Check%20It%20Off.app/www/index.html
+2014-11-09 10:56:05.799 Check It Off[66719:3635584] CDVPlugin class CDVStatusBar (pluginName: StatusBar) does not exist.
+2014-11-09 10:56:05.799 Check It Off[66719:3635584] ERROR: Plugin 'StatusBar' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-11-09 10:56:05.799 Check It Off[66719:3635584] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "StatusBar508421135",
+  "StatusBar",
+  "_ready",
+  [
+
+  ]
+]
