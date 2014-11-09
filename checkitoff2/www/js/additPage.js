@@ -1,0 +1,5 @@
+var additPage = {
+	initialize: function() {
+		
+	}
+}

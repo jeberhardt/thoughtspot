@@ -82,11 +82,11 @@ body {
 
 .ui-page-theme-a .ui-bar-inherit{
     height: 8%;
-
-border: 0;
-color: #fff;
-text-shadow: none;
+    border: 0;
+    color: #fff;
+    text-shadow: none;
 }
+
 /** BACK  BUTTON **/
 .ui-page .ui-header .ui-toolbar-back-btn {
     border: none;
@@ -208,7 +208,7 @@ h1 {
     height: 100%;
 }
 
-#talkit-link, #tossit-link, #readit-link {
+/*#talkit-link, #tossit-link, #readit-link {
     width:7rem;
     height: 7rem;
     -moz-border-radius: 3.75rem;
@@ -219,6 +219,18 @@ h1 {
     color:white;
     border-style: dashed;
     border-width: .2rem;
+}*/
+
+#mainmenu > div > a {
+    font-size: 1rem;
+    text-align:center; 
+    color:white;
+    border-style: dashed;
+    border-width: 0.2rem;    
+    line-height: 8em;
+    position: absolute;
+    left: 0.3rem;
+    top: 0.3rem;
 }
 
 #map-link {
@@ -227,19 +239,57 @@ h1 {
     -moz-border-radius: 5.75rem;
     -webkit-border-radius: 5.75rem;
     border-radius: 5.75rem;
-    font-size: 1rem;
-    text-align:center; 
-    color:white;
-    border-style: dashed;
-    border-width: .2rem;    
-    line-height: 8em;
-    position: absolute;
-    left:.7rem;
-    top: .7rem;
     line-height: 20em;
+}
+
+#eatit-link {
+    width: 7rem;
+    height: 7rem;
+    -moz-border-radius: 3.5rem;
+    -webkit-border-radius: 3.5rem;
+    border-radius: 3.5rem;
+    line-height: 11em;
+}
+
+#talkit-link {
+    width: 9rem;
+    height: 9rem;
+    -moz-border-radius: 4.5rem;
+    -webkit-border-radius: 4.5rem;
+    border-radius: 4.5rem;
+    line-height: 11em;
+}
+
+#tossit-link {
+    width: 7rem;
+    height: 7rem;
+    -moz-border-radius: 3.5rem;
+    -webkit-border-radius: 3.5rem;
+    border-radius: 3.5rem;  
+    line-height: 11em;
+}
+
+#readit-link {
+    width: 10rem;
+    height: 10rem;
+    -moz-border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    border-radius: 5rem;
+    line-height: 11em;
+}
+
+#addit-link {
+    width: 5rem;
+    height: 5rem;
+    -moz-border-radius: 2.5rem;
+    -webkit-border-radius: 2.5rem;
+    border-radius: 2.5rem;
+    line-height: 8em;
+}
+
+#mainmenu > div {
+    color: white;
     position: absolute;
-    left:.3rem;
-    top: .3rem;
 }
 
 #walkitBackground{
@@ -249,10 +299,8 @@ h1 {
     -webkit-border-radius: 6.25rem;
     border-radius: 6.25rem;
     font-size: 12rem;
-    color:white;
     background: rgba(251, 176, 59, 0.8);
-    position: absolute;
-    left:-0.75rem;
+    left: 0.5rem;
     top: 5rem; 
 }
 
@@ -266,35 +314,56 @@ h1 {
     color:white;
     background: #007100;
     position: absolute;
-    left:11rem;
+    left:12rem;
     top: 1rem;
 }
 
-#eatit-link {
-    width:7rem;
-    height: 7rem;
-    -moz-border-radius: 3.5rem;
-    -webkit-border-radius: 3.5rem;
-    border-radius: 3.5rem;
-    font-size: 1rem;
-    text-align:center; 
-    color:white;
-    border-style: dashed;
-    border-width: .2rem;    
-    line-height: 11em;
-    position: absolute;
-    left:0.3rem;
-    top:0.3rem;
+#talkitBackground {
+    width: 10rem;
+    height: 10rem;
+    -moz-border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    border-radius: 5rem;
+    font-size: 11rem;
+    background: #93278f;
+    left: 13rem;
+    top: 11rem;
 }
 
-#talkit-link {
-    /*background: #93278f;*/
+#tossitBackground {
+    width: 8rem;
+    height: 8rem;
+    -moz-border-radius: 4rem;
+    -webkit-border-radius: 4rem;
+    border-radius: 4rem;
+    font-size: 10rem;
+    background: #ed1e79;
+    left: 7rem;
+    top: 19rem;
 }
 
-#tossit-link {
-    /*background: #ed1e79;*/
+#readitBackground {
+    width: 11rem;
+    height: 11rem;
+    -moz-border-radius: 5.5rem;
+    -webkit-border-radius: 5.5rem;
+    border-radius: 5.5rem;
+    font-size: 10rem;
+    background: #009245;
+    left: 15rem;
+    top: 23rem;
 }
 
-#readit-link {
-    /*background: #009245;*/
+#additBackground {
+    width: 6rem;
+    height: 6rem;
+    -moz-border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    border-radius: 3rem;
+    font-size: 10rem;
+    background: #009245;
+    left: 2rem;
+    top: 29rem;
 }
+
+

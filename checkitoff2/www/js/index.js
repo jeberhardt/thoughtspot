@@ -45,6 +45,7 @@ var app = {
         $("#eatit-link").on("tap", function(e){
             e.preventDefault();
             $.mobile.changePage("#eatit"), { transition: "slidefade", reverse: false, changeHash: true};
+            eatitPage.initialize();
         });
 
         $("#readit-link").on("tap", function(e){
@@ -61,18 +62,17 @@ var app = {
             e.preventDefault();
             $.mobile.changePage("#talkit"), { transition: "slidefade", reverse: false, changeHash: true};
             talkitPage.initialize(); 
+        }); 
+
+        $("#addit-link").on("tap", function(e){
+            e.preventDefault();
+            $.mobile.changePage("#add"), { transition: "slidefade", reverse: false, changeHash: true};
+            additPage.initialize(); 
         });        
         
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        // var parentElement = document.getElementById(id);
-        // var listeningElement = parentElement.querySelector('.listening');
-        // var receivedElement = parentElement.querySelector('.received');
-
-        // listeningElement.setAttribute('style', 'display:none;');
-        // receivedElement.setAttribute('style', 'display:block;');
-
         console.log('Received Event: ' + id);
     },
 
