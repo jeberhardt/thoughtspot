@@ -80,6 +80,13 @@ body {
 #maps .ui-content { height: 92%; }
 #maps.ui-page-theme-a .ui-bar-inherit { height: 8%; background-color: #fbb03b; }
 
+.ui-page-theme-a .ui-bar-inherit{
+    height: 8%;
+
+border: 0;
+color: #fff;
+text-shadow: none;
+}
 /** BACK  BUTTON **/
 .ui-page .ui-header .ui-toolbar-back-btn {
     border: none;
