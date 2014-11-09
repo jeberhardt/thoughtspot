@@ -76,7 +76,7 @@ body {
     font-size: 1.3em;
     padding: 5%; 
 }
-.ui-header .ui-title { font-size: 2em; }
+
 #maps .ui-content { height: 92%; }
 #maps.ui-page-theme-a .ui-bar-inherit { height: 8%; background-color: #fbb03b; }
 
@@ -97,7 +97,6 @@ body {
     -webkit-border-radius: none;
     background-size: contain;
     box-shadow: none;
-    padding: 20px;
 }
 
 .ui-page .ui-btn-icon-left:after {
@@ -194,8 +193,11 @@ h1 {
 */
 
 .ui-header {
-    background-image : url(../img/cloud.png);
+    background-image : url(../img/clouds.png);
 }
+.ui-header .ui-title { font-size: 2em; color: black; }
+.ui-header .ui-title { padding: 0.2em 0; }
+.ui-header { overflow: visible; }
 
 #mainmenu {
     background-image: url(../img/Cat_Toss_Background.jpg);
@@ -366,4 +368,6 @@ h1 {
     top: 29rem;
 }
 
-
+.bookcontent {
+    background-size:100%;
+}
