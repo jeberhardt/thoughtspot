@@ -16,6 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+a { text-shadow:none !important; }
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
@@ -25,7 +28,7 @@ body {
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+/*    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-webkit-gradient(
@@ -34,15 +37,24 @@ body {
         left bottom,
         color-stop(0, #A7A7A7),
         color-stop(0.51, #E4E4E4)
-    );
+    );*/
+    background-image: url(../img/Cat_Toss_Background.jpg);
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
+    text-transform:none;
+    text-shadow:none;
     width:100%;
+    min-width: 320px;
+    min-height: 480px;
+    position: absolute;
+    background-size: cover;
+    background-position: 0px 38px;
+    width: 100%;
+    height: 100%;    
 }
 
 /* Portrait layout (default) */
@@ -58,6 +70,86 @@ body {
     margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
                                    /* offset horizontal: half of text area width */
 }
+
+#geolocation, #eat-geolocation { height: 45%; width: 100%; }
+
+#mapListing, #eat-mapListing { width: 100%; height: 42%; overflow-y: scroll;}
+
+#message-area, #eat-message-area { 
+    width: 90%;
+    display: block;
+    background: #fbb03b;
+    height: 6%;
+    color: white;
+    text-shadow: none;
+    font-size: 1.3em;
+    padding: 5%; 
+}
+
+#eat-message-area { 
+    background-color: rgb(0,113,0);
+}
+
+#maps .ui-content { height: 92%; }
+#maps.ui-page-theme-a .ui-bar-inherit { height: 8%; background-color: #fbb03b; }
+
+#eatit .ui-content { height: 92%; }
+#eatit.ui-page-theme-a .ui-bar-inherit { height: 8%; background-color: rgb(0, 113, 0); }
+
+.ui-page-theme-a .ui-bar-inherit{
+    height: 8%;
+    border: 0;
+    color: #fff;
+    text-shadow: none;
+}
+
+/** BACK  BUTTON **/
+.ui-page .ui-header .ui-toolbar-back-btn {
+    border: none;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: transparent url(../img/back_button.png) left top no-repeat;
+    border-radius: none;
+    -webkit-border-radius: none;
+    background-size: contain;
+    box-shadow: none;
+}
+
+.ui-page .ui-btn-icon-left:after {
+    background: none;
+}
+
+.ui-page {
+    background: none;
+    background-image: none;
+}
+
+.location-list-item {
+    /*height: 50px;*/
+    background-color: #fbb03b;
+    font-size: 1.3em;
+    color: white;
+    vertical-align: middle;
+    /*padding: 10px 5px 0;*/
+    text-shadow: none;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid white;
+}
+
+#eatit .location-list-item {
+    background-color: rgb(0,113,0);
+}
+.location-list-item p {
+    padding: 10px;
+    margin: 0;
+}
+
+.ui-content { padding: 0; }
+
+.ui-mobile .ui-page-active { height: 100%; }
+
+#mainmenu { height: 100%; }
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
@@ -76,6 +168,10 @@ h1 {
     overflow:visible;
     padding:0px;
     text-align:center;
+}
+
+.bookTitle {
+    font-size: 14px;
 }
 
 .event {
@@ -113,3 +209,162 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+/*
+#walkitButton {
+    width: 100px;
+    height: 100px;
+    min-height: 100px;
+    background: red;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+*/
+
+.ui-header {
+    background-image : url(../img/clouds.png);
+}
+.ui-header .ui-title { font-size: 2em; color: black; }
+.ui-header .ui-title { padding: 0.2em 0; }
+.ui-header { overflow: visible; }
+
+#mainmenu, #readitPage {
+    /*background-image: url(../img/Cat_Toss_Background.jpg);*/
+    /*background-size: "100%";*/
+    min-width: 320px;
+    min-height: 480px;
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#mainmenu > div {
+    color: white;
+    position: absolute;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+#mainmenu > div.loading {
+    width: 0;
+    height: 0;
+}
+
+#mainmenu > div > img {
+    width: 90%;
+    position: absolute;
+    margin-left: 5%;
+}
+
+.circle {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;    
+}
+
+a {
+    text-decoration: none;
+}
+
+.circle > a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width:90%;
+    height: 90%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border-style: dashed;
+    border-width: 2px;
+
+    font-size: 15%;
+    text-align:center; 
+    color:white;
+    line-height: 5em;
+}
+
+#walkitBackground{
+    width: 12.5rem;
+    height: 12.5rem;
+    font-size: 12rem;
+    background: rgba(251, 176, 59, 0.8);
+    left: 0.5rem;
+    top: 5rem; 
+}
+
+#eatitBackground{
+    width: 8rem;
+    height: 8rem;
+    font-size: 10rem;
+    color:white;
+    background: rgba(0, 113, 0, 0.8);
+    position: absolute;
+    left: 12rem;
+    top: 1rem;
+}
+
+#talkitBackground {
+    width: 10rem;
+    height: 10rem;
+    font-size: 11rem;
+    background: rgba(147, 39, 143, 0.8);
+    left: 13rem;
+    top: 11rem;
+}
+
+#tossitBackground {
+    width: 8rem;
+    height: 8rem;
+    font-size: 10rem;
+    background: rgba(237, 30, 121, 0.8);
+    left: 7rem;
+    top: 19rem;
+}
+
+#readitBackground {
+    width: 11rem;
+    height: 11rem;
+    font-size: 10rem;
+    background: rgba(0, 113, 188, 0.8);
+    left: 15rem;
+    top: 23rem;
+}
+
+#additBackground {
+    width: 6rem;
+    height: 6rem;
+    font-size: 10rem;
+    background: rgba(0, 0, 0, 0.8);
+    left: 2rem;
+    top: 29rem;
+}
+
+.bookcontent {
+    background-size:100%;
+}
+
+/* READ IT CSS*/
+
+#romanceBookBackground, #comedyBookBackground, #adventureBookBackground, #scifiBookBackground{
+    background: rgba(251, 176, 59, 0.8);
+    width: 6em;
+    height: 6em;
+    left: 2em;
+    top: 0;
+    position:relative;
+}
+
+#romanceBookBackground > a, #comedyBookBackground > a, #adventureBookBackground > a, #scifiBookBackground > a {
+    font-size: 1em;
+}
+

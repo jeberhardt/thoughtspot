@@ -1,7 +1,8 @@
-*
-*.*
-*.mode1v3
-*.perspectivev3
-*.pbxuser
 .DS_Store
-build/
+Check It Off
+Check It Off.xcodeproj
+CordovaLib
+build
+cordova
+platform_www
+www

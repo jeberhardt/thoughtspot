@@ -18,6 +18,7 @@
  */
 var app = {
     // Application Constructor
+    
     initialize: function() {
         this.bindEvents();
     },
@@ -26,6 +27,7 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
+        $.mobile.defaultPageTransition = 'slidefade';
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
@@ -34,55 +36,39 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
-    },
-    onSuccess: function(pos) {
-        var lat = pos.coords.latitude;
-        var lon = pos.coords.longitude;
-        var latlon = new google.maps.LatLng(lat, lon);
+        
+        TweenLite.from($("#walkitBackground"), 0.5, { scaleX: 0, scaleY: 0 });
 
-        var opts = {
-            center: latlon,
-            zoom: 16,
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-            streetViewControl: false
-        };
+        $("#map-link").on("tap", function(e){
+            e.preventDefault();
+            $.mobile.changePage("#maps"), { transition: "slidefade", reverse: false, changeHash: true};
+            walk.initialize(); 
+        });
 
-        var map = new google.maps.Map(document.getElementById("geolocation"), opts);
-        app.initMaps();
+        $("#eatit-link").on("tap", function(e){
+            e.preventDefault();
+            $.mobile.changePage("#eatit"), { transition: "slidefade", reverse: false, changeHash: true};
+            eatitPage.initialize();
+        });        
 
-    },
-    onError: function(error) {
-        alert("error bitches: " + error.code + "\nmessage: " + error.message + "\n");
+        $("#talkit-link").on("tap", function(e){
+            e.preventDefault();
+            $.mobile.changePage("#talkit"), { transition: "slidefade", reverse: false, changeHash: true};
+            talkitPage.initialize(); 
+        }); 
+
+        $("#addit-link").on("tap", function(e){
+            e.preventDefault();
+            $.mobile.changePage("#add"), { transition: "slidefade", reverse: false, changeHash: true};
+            additPage.initialize(); 
+        });
+
+        
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        // var parentElement = document.getElementById(id);
-        // var listeningElement = parentElement.querySelector('.listening');
-        // var receivedElement = parentElement.querySelector('.received');
-
-        // listeningElement.setAttribute('style', 'display:none;');
-        // receivedElement.setAttribute('style', 'display:block;');
-
         console.log('Received Event: ' + id);
     },
 
 
-    //*********************************** MARC ******************************//
-
-    initMaps: function() {
-        console.log("GET OUT OF MY HOUSE");
-        app.loadThoughtSpotData();
-    },
-
-    loadThoughtSpotData: function() {
-         $.ajax({
-            url: "data/tsdata.csv",
-            dataType: 'text',
-            cache: false
-         }).done(function(csvAsString){
-                csvAsArray = csvAsString.csvToArray({ rSep:'||' , fSep:'#' , quot:"'" , trim:true });
-                alert("COMPLETE: " + csvAsArray[0].length);
-         });
-    }
 };
